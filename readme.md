@@ -61,3 +61,6 @@ On master node
 
 # Add data source as prometheus
   Add prometheus URL - <Node-server-IP>:9090
+
+# Create alerting rules 
+ Home -> Alerting -> AlertRules -> Execute Rule
