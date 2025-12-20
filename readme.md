@@ -30,6 +30,16 @@ On master node
 
 # Access prometheus using
    <node-server-IP>:9090
+   
+# Prometheus Alerts 	    
+		  - write alert.rules.yml file 
+		        - write alert definition with alert severity (like moderate / critical / warning)
+				      - high cpu utilization 
+					     - high memory utilization 
+					     - high http error rate 		  
+		  - update prometheus.yml file to include this alert rule file 	  
+		  - configure prometheus Alert Manager to receive alerts from Prometheus and route them to desired contacts (email/slack) 
+		  - restart prometheus service 
 
 # Fire promQL queries for getting state of system 
   - CPU utilization
@@ -69,6 +79,12 @@ On master node
 # Add data source as prometheus
   Add prometheus URL - <Node-server-IP>:9090
 
+Create alerting rules
+   - Add prometheus as source 
+	  - Go to alert tab and create alert 
+	  - define alert rule 
+	  - cofigure notification setting to route alerts to desired contacts 
+    
 ===========================================================================
 # Implement Custom metrics in Node.js Application
 
